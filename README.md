@@ -1,7 +1,6 @@
-# Booking System – individual coding exam
+# Booking System
 
-This is a starter project for the individual practical coding exam. The
-application targets .NET 10 and contains a console application and xUnit tests.
+A console application for managing meeting room bookings.
 
 ## Requirements
 
@@ -9,15 +8,22 @@ application targets .NET 10 and contains a console application and xUnit tests.
 
 ## Run the application
 
-```bash
+Open a terminal in the folder containing `BookingSystemExam.slnx` and run: 
+
+```powershell
 dotnet run --project src/BookingSystem
 ```
 
+Follow the console menu instrucitions to manage bookings. Select `0` to the exit the application.
+
 ## Run the tests
 
-```bash
+From the same folder, run:
+
+```powershell
 dotnet test
 ```
 
-Read the separate assignment instructions before starting. The existing code
-is incomplete and contains intentional defects.
+## Debugging report
+
+See [DEBUGGING.md](DEBUGGING.md) for a description of the booking overlap issue and its fix.
