@@ -22,6 +22,12 @@ I koden används nu ">" och "<" utan "=" eftersom en bokning ska kunna börja n�
 Kontrollen gäller endast aktiva bokningar i samma rum och på samma datum. 
 Bokningar i andra rum eller på andra datum ska inte blockera tiden. 
 Avbokade bokningar ska inte heller hindra att tiden bokas igen.
+
+En annan lösning som går att göra är att först kontrollera om bokningarna inte överlappar. 
+Då ser man till att den nya bokningen slutar innan den befintliga börjar eller börjar efter att den befintliga slutar. 
+I detta fall hade samma klockslag också varit tillåtet. Om något av detta stämmer överlappar inte bokningarna. 
+Jag valde att kontrollera överlappningen direkt istället eftersom villkoret då visar när bokningen ska nekas vilket gör det enklare att följa i min mening.
+
 För att kontrollera att ändringen fungerade så återskapade jag scenariot från innan där jag skapar en bokning med start 08:00 och slut 10:00 trots att det redan finns en bokning mellan 09:00-11:00. 
 Den här gången nekades bokningen  och man fick ett felmeddelande. 
 Jag kontrollerade också att en bokning som startade vid sluttid kunde registreras. 
